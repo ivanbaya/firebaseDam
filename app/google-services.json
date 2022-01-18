@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "49615874638",
+    "project_id": "damvidreres",
+    "storage_bucket": "damvidreres.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:49615874638:android:4ff98a71a32802c55ab11f",
+        "android_client_info": {
+          "package_name": "com.example.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "49615874638-vm4j343vfua3ijoft525d0prvu1hgp7o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3HY_bxncWFKKLb_xIVLEMCbN5u6-GN3w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "49615874638-vm4j343vfua3ijoft525d0prvu1hgp7o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
