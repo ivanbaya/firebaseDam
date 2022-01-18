@@ -13,6 +13,9 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import com.example.firebasedam.R
+import android.widget.Button
+
 
 /**
  * Demonstrate Firebase Authentication using a Google ID Token.
@@ -25,15 +28,19 @@ class GoogleSignInActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken("49615874638-vm4j343vfua3ijoft525d0prvu1hgp7o.apps.googleusercontent.com")
             .requestEmail()
             .build()
-
         googleSignInClient = GoogleSignIn.getClient(this, gso)
-
         auth = Firebase.auth
+
+        val btn_click_me = findViewById(R.id.buttonLogIn) as Button
+        btn_click_me.setOnClickListener {
+            signIn()
+        }
     }
 
     override fun onStart() {
