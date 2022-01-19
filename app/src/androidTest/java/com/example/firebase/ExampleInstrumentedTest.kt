@@ -1,4 +1,4 @@
-package com.example.firebasedam
+package com.example.firebase
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

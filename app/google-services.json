@@ -9,10 +9,18 @@
       "client_info": {
         "mobilesdk_app_id": "1:49615874638:android:4ff98a71a32802c55ab11f",
         "android_client_info": {
-          "package_name": "com.example.firebasedam"
+          "package_name": "com.example.firebase"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "49615874638-csg5jf93g0o6psuo1ua29gi6eefken6g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firebase",
+            "certificate_hash": "c6eaaf6cae5744651aee2dd518d2b0bdf487d278"
+          }
+        },
         {
           "client_id": "49615874638-vm4j343vfua3ijoft525d0prvu1hgp7o.apps.googleusercontent.com",
           "client_type": 3

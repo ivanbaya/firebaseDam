@@ -7,7 +7,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.firebasedam"
+        applicationId "com.example.firebase"
         minSdk 21
         targetSdk 32
         versionCode 1
@@ -31,20 +31,25 @@ android {
     }
 }
 
-apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
-
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.google.android.material:material:1.4.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation platform('com.google.firebase:firebase-bom:29.0.3')
-    implementation 'com.google.firebase:firebase-analytics'
-    implementation 'com.google.firebase:firebase-auth-ktx'
-    implementation 'com.google.android.gms:play-services-auth:20.0.1'
+
+    //Navigation
+
+    // RecyclerView
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+
+    implementation 'com.google.firebase:firebase-auth'
+    implementation "com.google.firebase:firebase-auth-ktx:21.0.1"
+    implementation "com.firebaseui:firebase-ui-auth:8.0.0"
+    implementation 'com.google.android.gms:play-services-auth:19.2.0'
 }
