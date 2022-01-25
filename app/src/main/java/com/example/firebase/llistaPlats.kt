@@ -24,7 +24,7 @@ class llistaPlats : AppCompatActivity() {
 
         val query: Query = FirebaseFirestore.getInstance()
             .collection("plats")
-            .orderBy("timestamp")
+            .orderBy("timestamp") //
             .limit(50)
 
         val options: FirestoreRecyclerOptions<plat> = FirestoreRecyclerOptions.Builder<plat>()
