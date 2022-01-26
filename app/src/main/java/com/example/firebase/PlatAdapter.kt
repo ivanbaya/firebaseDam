@@ -1,25 +1,33 @@
 package com.example.firebase
 
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
 
-class PlatAdapter {
-    FirestoreRecyclerAdapter adapter = new FirestoreRecyclerAdapter<Chat, ChatHolder>(options) {
-        @Override
-        public void onBindViewHolder(ChatHolder holder, int position, Chat model) {
+class PlatAdapter(private val platList : ArrayList<plat>) : RecyclerView.Adapter<PlatAdapter.MyViewHolder>() {
 
-        }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlatAdapter.MyViewHolder {
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.activity_llista_plats, parent, false)
 
-        @Override
-        public ChatHolder onCreateViewHolder(ViewGroup group, int i) {
-            // Using a custom layout called R.layout.message for each item, we create a new instance of the viewholder
-            View view = LayoutInflater.from(group.getContext())
-                .inflate(R.layout.message, group, false);
+        return MyViewHolder(itemView)
+    }
 
-            return new ChatHolder(view);
-        }
-    };
-//Final step, where "mRecyclerView" is defined in your xml layout as
-//the recyclerview
-    mRecyclerView.setAdapter(adapter);
+    override fun onBindViewHolder(holder: PlatAdapter.MyViewHolder, position: Int) {
+        val plat : plat = platList[position]
+        holder.nom.text = plat.nom
+        holder.descripcio.text = plat.descripcio
+        holder.preu.text = plat.preu.toString()
+    }
+
+    override fun getItemCount(): Int {
+        platList.size
+    }
+
+    public class MyViewHolder(itemView:View) : RecyclerView.ViewHolder(itemView){
+        val nom : TextView = itemView.findViewById<R.id.nom>()
+        val descripcio : TextView = itemView.findViewById<R.id.descripcio>()
+        val preu : TextView = itemView.findViewById<R.id.preu>()
+    }
 }

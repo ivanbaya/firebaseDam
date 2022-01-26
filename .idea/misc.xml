@@ -3,11 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/alum-01/AndroidStudioProjects/firebaseDam/app/src/main/res/layout/activity_llista_plats.xml" value="0.25" />
         <entry key="..\:/Users/alum-01/AndroidStudioProjects/firebaseDam/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/alum-01/AndroidStudioProjects/firebaseDam/app/src/main/res/layout/activity_main2.xml" value="0.25" />
-        <entry key="..\:/Users/alum-01/AndroidStudioProjects/firebaseDam/app/src/main/res/layout/activity_menu.xml" value="0.22" />
-        <entry key="..\:/Users/alum-01/AndroidStudioProjects/firebaseDam/app/src/main/res/layout/plat.xml" value="0.5" />
+        <entry key="..\:/Users/alum-01/AndroidStudioProjects/firebaseDam/app/src/main/res/layout/activity_main2.xml" value="0.1" />
+        <entry key="..\:/Users/alum-01/AndroidStudioProjects/firebaseDam/app/src/main/res/layout/plat.xml" value="0.21354166666666666" />
       </map>
     </option>
   </component>
