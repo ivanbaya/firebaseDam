@@ -21,18 +21,25 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.button2).setOnClickListener{ view: View? ->
             val user = hashMapOf(
-                "email" to findViewById<EditText>(R.id.editTextTextEmailAddress).text.toString(),
                 "nom" to findViewById<EditText>(R.id.editTextTextPersonName).text.toString(),
                 "telefon" to findViewById<EditText>(R.id.editTextPhone).text.toString()
             )
-            db.collection("users")
-                .add(user)
+            db.collection("users").document(findViewById<EditText>(R.id.editTextTextEmailAddress).text.toString())
+                .set(user)
                 .addOnSuccessListener { documentReference ->
-                    Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
+                    Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference}")
                 }
                 .addOnFailureListener { e ->
                     Log.w(TAG, "Error adding document", e)
                 }
+            startActivity(Intent(this, menu::class.java))
+            finish()
+        }
+        findViewById<Button>(R.id.buttonBorrar).setOnClickListener { view: View? ->
+            db.collection("users").document(findViewById<EditText>(R.id.editTextTextEmailAddress).text.toString())
+                .delete()
+                .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully deleted!") }
+                .addOnFailureListener { e -> Log.w(TAG, "Error deleting document", e) }
             startActivity(Intent(this, menu::class.java))
             finish()
         }

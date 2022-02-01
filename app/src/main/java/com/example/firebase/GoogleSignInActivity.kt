@@ -51,6 +51,8 @@ class GoogleSignInActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+        startActivity(Intent(this, menu::class.java))
+        finish()
         if(GoogleSignIn.getLastSignedInAccount(this)!=null){
             startActivity(Intent(this, menu::class.java))
             finish()
