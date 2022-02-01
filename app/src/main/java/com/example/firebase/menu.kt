@@ -15,5 +15,9 @@ class menu : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
+        findViewById<Button>(R.id.buttonCreate).setOnClickListener{ view: View? ->
+            startActivity(Intent(this, llistaPlats::class.java))
+            finish()
+        }
     }
 }

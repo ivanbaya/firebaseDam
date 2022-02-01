@@ -52,7 +52,7 @@ class GoogleSignInActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         if(GoogleSignIn.getLastSignedInAccount(this)!=null){
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, menu::class.java))
             finish()
         }
     }

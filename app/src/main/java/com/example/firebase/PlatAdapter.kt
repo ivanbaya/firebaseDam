@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 class PlatAdapter(private val platList : ArrayList<plat>) : RecyclerView.Adapter<PlatAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlatAdapter.MyViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.activity_llista_plats, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.plat, parent, false)
 
         return MyViewHolder(itemView)
     }
@@ -22,12 +22,12 @@ class PlatAdapter(private val platList : ArrayList<plat>) : RecyclerView.Adapter
     }
 
     override fun getItemCount(): Int {
-        platList.size
+        return platList.size
     }
 
     public class MyViewHolder(itemView:View) : RecyclerView.ViewHolder(itemView){
-        val nom : TextView = itemView.findViewById<R.id.nom>()
-        val descripcio : TextView = itemView.findViewById<R.id.descripcio>()
-        val preu : TextView = itemView.findViewById<R.id.preu>()
+        val nom : TextView = itemView.findViewById(R.id.nom)
+        val descripcio : TextView = itemView.findViewById(R.id.descripcio)
+        val preu : TextView = itemView.findViewById(R.id.preu)
     }
 }
