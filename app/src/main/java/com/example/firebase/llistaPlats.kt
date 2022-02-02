@@ -29,7 +29,7 @@ class llistaPlats : AppCompatActivity() {
 
         platArrayList = arrayListOf()
 
-        platAdapter = PlatAdapter(platArrayList)
+        platAdapter = PlatAdapter(platArrayList, applicationContext)
 
         recyclerView.adapter = platAdapter
 

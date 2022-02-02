@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
@@ -40,6 +41,10 @@ class MainActivity : AppCompatActivity() {
                 .delete()
                 .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully deleted!") }
                 .addOnFailureListener { e -> Log.w(TAG, "Error deleting document", e) }
+            startActivity(Intent(this, menu::class.java))
+            finish()
+        }
+        findViewById<Button>(R.id.buttonVolver).setOnClickListener{ view: View? ->
             startActivity(Intent(this, menu::class.java))
             finish()
         }
