@@ -63,9 +63,9 @@
 
     <EditText
         android:id="@+id/editReview"
-        android:layout_width="331dp"
-        android:layout_height="201dp"
-        android:layout_marginBottom="104dp"
+        android:layout_width="326dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="244dp"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
@@ -101,7 +101,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:text="TextView"
+        android:text="Valoracio"
         app:layout_constraintBottom_toTopOf="@+id/editReview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.113"
@@ -136,5 +136,15 @@
         android:text="Preu:"
         app:layout_constraintEnd_toStartOf="@+id/platPreu"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <Button
+        android:id="@+id/buttonUploadImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Afegir imatge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editReview" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

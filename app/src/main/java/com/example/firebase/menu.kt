@@ -26,6 +26,10 @@ class menu : AppCompatActivity() {
             startActivity(Intent(this, llistaPlats::class.java))
             finish()
         }
+        findViewById<Button>(R.id.buttonLista).setOnClickListener{ view: View? ->
+            startActivity(Intent(this, llistaResenya::class.java))
+            finish()
+        }
         findViewById<Button>(R.id.buttonCerrarSession).setOnClickListener{ view: View? ->
             Firebase.auth.signOut()
             startActivity(Intent(this, GoogleSignInActivity::class.java))
