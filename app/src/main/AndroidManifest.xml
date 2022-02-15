@@ -10,6 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FirebaseDam">
         <activity
+            android:name=".llistaResenya"
+            android:exported="false" />
+        <activity
+            android:name=".reviewPlat"
+            android:exported="false" />
+        <activity
+            android:name=".llistaPlats"
+            android:exported="false"
+            android:label="@string/title_activity_llista_plats"
+            android:theme="@style/Theme.FirebaseDam.NoActionBar" />
+        <activity
+            android:name=".menu"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true" />
         <activity
